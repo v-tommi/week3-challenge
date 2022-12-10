@@ -5,6 +5,10 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
+  var lower = "abcdefghijklmnopqrstuvwxyz";
+  var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var numeric = "0123456789";
+  var specialchar = "!@#$%^&*()";
 
   passwordText.value = password;
 
