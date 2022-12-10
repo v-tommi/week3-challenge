@@ -10,9 +10,9 @@ function writePassword() {
   var numeric = "0123456789";
   var specialchar = "!@#$%^&*()";
   
-  var pwlength
-  var pwvalues
-  var pwactual
+  var pwlength;
+  var pwvalues;
+  var pwactual;
 
   if (pwlength == null) {
     prompt(
@@ -61,7 +61,19 @@ function writePassword() {
     pwvalues = pwvalues + specialchar
   };
 
+  const random = (length = 8) => {
+    let pwactual = " ";
+    while (pwlength > 0) {
+      pwactual += pwvalues.charAt(Math.floor(Math.random() * pwvalues.length));
 
+    return pwactual;
+
+    }; pwlength--;
+  };
+
+  
+
+  passwordText.value = password;
 
 
 }
