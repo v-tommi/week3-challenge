@@ -10,8 +10,10 @@ function writePassword() {
   var numeric = "0123456789";
   var specialchar = "!@#$%^&*()";
   
-  var pwlength 
-  
+  var pwlength
+  var pwvalues
+  var pwactual
+
   if (pwlength == null) {
     prompt(
       "Choose password length." + "\n" +
@@ -28,24 +30,39 @@ function writePassword() {
     "(Ok = Yes, Cancel = No)"
   );
   
+  if (pwrequpper) {
+    pwvalues = upper
+  };
+
   var pwreqlower = confirm(
     "Require lower case characters?" + "\n" +
     "(Ok = Yes, Cancel = No)"
   );
+
+  if (pwreqlower) {
+    pwvalues = pwvalues + lower
+  };
 
   var pwreqnumbers = confirm(
     "Require numeric values?" + "\n" +
     "(Ok = Yes, Cancel = No)"
   );
 
+  if (pwreqnumbers) {
+    pwvalues = pwvalues + numeric
+  };
+
   var pwreqspecial = confirm(
     "Require special characters?" + "\n" +
     "(Ok = Yes, Cancel = No)"
   );
 
-  Math.floor(Math.random(pwlength))
+  if (pwreqspecial) {
+    pwvalues = pwvalues + specialchar
+  };
 
-  passwordText.value = password;
+
+
 
 }
 
