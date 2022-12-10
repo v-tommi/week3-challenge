@@ -10,27 +10,35 @@ function writePassword() {
   var numeric = "0123456789";
   var specialchar = "!@#$%^&*()";
   
-  let pwlength = prompt(
-    "Choose password length." + "\n" +
-    "(Minimum character requirements: 8-128)"
-    );
+  var pwlength 
   
-  let pwrequpper = confirm(
+  if (pwlength == null) {
+    prompt(
+      "Choose password length." + "\n" +
+      "(Minimum character requirements: 8-128)"
+      )
+  } else {
+    prompt(
+      "Choose a valid value between 8-128."
+    )
+  };
+  
+  var pwrequpper = confirm(
     "Require UPPER case characters?" + "\n" +
     "(Ok = Yes, Cancel = No)"
   );
   
-  let pwreqlower = confirm(
+  var pwreqlower = confirm(
     "Require lower case characters?" + "\n" +
     "(Ok = Yes, Cancel = No)"
   );
 
-  let pwreqnumbers = confirm(
+  var pwreqnumbers = confirm(
     "Require numeric values?" + "\n" +
     "(Ok = Yes, Cancel = No)"
   );
 
-  let pwreqspecial = confirm(
+  var pwreqspecial = confirm(
     "Require special characters?" + "\n" +
     "(Ok = Yes, Cancel = No)"
   );
