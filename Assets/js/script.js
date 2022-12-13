@@ -3,7 +3,7 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  debugger;
+  //debugger;
   // commented below line due to an error stating password was not declared or defined
   //var password = generatePassword();
   var passwordText = document.querySelector("#pwactual");
